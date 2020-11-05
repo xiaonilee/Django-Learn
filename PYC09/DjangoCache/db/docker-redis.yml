@@ -1,0 +1,17 @@
+version: '3.7'
+
+services:
+  redis:
+    image: wholerengroup/redis:5.0
+    ports:
+      - "6379:6379"
+  phpredisadmin:
+    image: wholerengroup/phpredisadmin
+    environment:
+      - REDIS_1_NAME=redis_server
+      - REDIS_1_HOST=redis_server_host
+      - REDIS_1_PORT=6379
+    ports:
+      - "8081:8080"
+    links:
+      - redis:redis_server_host

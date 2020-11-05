@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Image</title>
+</head>
+<body>
+
+<form action="{% url 'app:image_field' %}" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <span>Username:</span><input type="text" name="username" placeholder="Please Enter your username">
+    <br>
+    <span>Image</span><input type="file" name="icon">
+    <br>
+    <button>Upload</button>
+</form>
+
+
+</body>
+</html>

@@ -1,0 +1,21 @@
+version: '2.2'
+
+services:
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    environment:
+      - PMA_HOSTS=mariadb_server
+    ports:
+      - "8080:80"
+    links:
+      - mariadb:mariadb_server
+  mariadb:
+    image: wholerengroup/mysql_mariadb:10.3
+    environment:
+      - MYSQL_ROOT_PASSWORD=123456
+      - MYSQL_DATABASE=TryDjango
+#    volumes:
+#      - "./mariadb/_var_lib_mysql:/var/lib/mysql"
+    ports:
+      - "3306:3306"
+    command: ["mysqld"]

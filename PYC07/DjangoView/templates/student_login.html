@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>StudentLogin</title>
+</head>
+<body>
+
+<form action="{% url 'two:student_login' %}" method="post">
+    <span>username:</span><input type="text" name="username" placeholder="please enter your username">
+    <br>
+    <span>password:</span><input type="text" name="password" placeholder="please enter your password">
+    <br>
+
+    <button>Student Login</button>
+
+</form>
+
+</body>
+</html>
