@@ -17,7 +17,7 @@
 ## 进入mysql终端: 
 - mysql -h127.0.0.1 -uroot -p123456
 ## 退出 mysql server: 
-- docker-compose -f docker-madiadb.yml down
+- docker-compose -f docker-mariadb.yml down
 
 
 
